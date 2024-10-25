@@ -20,7 +20,10 @@ $result = $link->query($postsQuery);
         <ul>
             <?php if(mysqli_num_rows($result) > 0) {?>
                 <?php while($row = mysqli_fetch_assoc($result)) {?>
-                    <li><?php echo $row["title"] ?></li>
+                    <div class="card">
+                        <img src="<?php echo $row["image"] ?>" alt="<?php echo $row["title"] ?> name">
+                        <li><?php echo $row["title"] ?></li>
+                    </div>
                 <?php } ?>
             <?php } ?>
         </ul>
