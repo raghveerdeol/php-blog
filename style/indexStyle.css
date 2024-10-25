@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: pink;
+}
+.cards-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card{
+    background-color: cornsilk;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    padding: 2.5rem;
+}
+.card > img{
+    width: 100%;
+    object-fit: contain;
+}
+.card > h2{
+    margin: 1rem 0;
+}

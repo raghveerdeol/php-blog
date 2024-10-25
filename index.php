@@ -13,20 +13,22 @@ $result = $link->query($postsQuery);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+    <link rel="stylesheet" href="./style/indexStyle.css">
 </head>
 <body>
     <header></header>
     <main>
-        <ul>
+        <div class="cards-container">
             <?php if(mysqli_num_rows($result) > 0) {?>
                 <?php while($row = mysqli_fetch_assoc($result)) {?>
                     <div class="card">
-                        <img src="<?php echo $row["image"] ?>" alt="<?php echo $row["title"] ?> name">
-                        <li><?php echo $row["title"] ?></li>
-                    </div>
-                <?php } ?>
+                    <img src="<?php echo $row["image"] ?>" alt="<?php echo $row["title"] ?> name">
+                    <h2><?php echo $row["title"] ?></h2>
+                    <p><?php echo $row["content"] ?></p>
+                </div>
             <?php } ?>
-        </ul>
+            <?php } ?>
+        </div>
     </main>
 </body>
 </html>
