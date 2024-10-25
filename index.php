@@ -1,5 +1,9 @@
 <?php 
 session_start();
+require_once "./db/config.php";
+
+$postsQuery = "SELECT * From 'posts'";
+$result = mysqli_query($link, $postsQuerry);
 
 ?>
 
@@ -8,21 +12,18 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Blog</title>
 </head>
 <body>
     <header></header>
     <main>
-        <form action="./index.php" method="POST" class="login">
-
-            <label for="user">User</label>
-            <input type="text" name="user" id="user" for="name">
-
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password">
-
-            <button type="submit">Login</button>
-        </form>
+        <ul>
+            <?php if(mysqli_num_rows($result) > 0) {?>
+                <?php while($row = mysqli_fetch_assoc($result)) {?>
+                    <li><?php $row["title"] ?></li>
+                <?php } ?>
+            <?php } ?>
+        </ul>
     </main>
 </body>
 </html>

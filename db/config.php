@@ -1,12 +1,12 @@
 <?php 
 // databse credentials 
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'root');
-define('DB_NAME', 'php_blog');
+$servername = 'localhost';
+$username = 'root';
+$password = 'root';
+$databasename = 'php_blog';
 
 // attempt to connect 
-$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+$link = new mysqli($servername, $username, $password, $databasename);
 
 // check connection 
 if ($link === false) {
