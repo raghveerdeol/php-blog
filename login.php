@@ -22,7 +22,7 @@
         if (empty(trim($_POST["username"]))) {
             $username_err = "Please enter username.";
         } else {
-            $username = trim($_Post["username"]);
+            $username = trim($_POST["username"]);
         }
 
         // check password 
