@@ -1,6 +1,6 @@
 <?php 
 // include config file 
-require_once "./db/config.php";
+require_once "./config.php";
 
 $username = "";
 $password = "";
