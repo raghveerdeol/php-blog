@@ -42,6 +42,10 @@
                             <input type="text" value="<?php echo $row["title"]?>" name="postTitle" hidden>
                             <button type="submit" class="show-button">Show</button>
                         </form>
+                        <form action="./delete.php" method="POST">
+                            <input type="text" value="<?php echo $row["title"]?>" name="postTitle" hidden>
+                            <button type="submit" class="show-button">Delete</button>
+                        </form>
                     </div>
                 <?php } ?>
             <?php } ?>
