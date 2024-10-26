@@ -27,8 +27,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <nav class="navbar">
             <div>ICON</div>
             <div class="actions">
-                <a href="./login.php">Login</a>
-                <a href="./register.php">Sign up</a>
+                <?php if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {?>
+                    <a href="./login.php">Login</a>
+                    <a href="./register.php">Sign up</a>
+                    <?php } else {?>
+                        <a href="./welcome.php">Home</a>
+                        <a href="./logout.php">Logout</a>
+                <?php } ?>
             </div>
         </nav>
     </header>

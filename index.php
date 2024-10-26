@@ -1,5 +1,4 @@
 <?php 
-session_start();
 require_once "./config.php";
 
 $postsQuery =
@@ -35,12 +34,14 @@ mysqli_close($link);
                 <?php while($row = mysqli_fetch_assoc($postsResult)) {?>
                     <div class="card">
                         <img src="<?php echo $row["image"] ?>" alt="<?php echo $row["title"] ?> name">
-                        <h2><?php echo $row["title"] ?></h2>
-                        <p><?php echo $row["name"] ?></p>
-                        <form action="./show.php" method="POST">
-                            <input type="text" value="<?php echo $row["title"]?>" name="postTitle" hidden>
-                            <button type="submit">Show</button>
-                        </form>
+                        <div class="info">
+                            <h2><?php echo $row["title"] ?></h2>
+                            <span  class="<?php echo $row["name"] ?> category"><em><?php echo $row["name"] ?></em></span>
+                            <form action="./show.php" method="POST">
+                                <input type="text" value="<?php echo $row["title"]?>" name="postTitle" hidden>
+                                <button type="submit" class="show-button">Show</button>
+                            </form>
+                        </div>
                     </div>
                 <?php } ?>
             <?php } ?>

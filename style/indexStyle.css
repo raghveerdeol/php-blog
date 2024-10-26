@@ -13,6 +13,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
 .actions{
     display: flex;
@@ -54,13 +55,68 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 3rem 0rem;
-    padding: 2.5rem;
+    justify-content: space-around;
+    margin-top: 3rem;
 }
 .card > img{
     width: 100%;
     object-fit: contain;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 1rem;
+    padding: 1rem;
 }
-.card > h2{
-    margin: 1rem 0;
+.info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: .5rem 0;
+    background-color: whitesmoke;
+
 }
+.div > h2{
+    margin: 1rem 1rem;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+form{
+    display: inline-block;
+}
+
+.show-button{
+    padding: .7rem 1rem;
+    background-color: pink;
+    border: 1px solid pink;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.show-button:hover{
+    background-color: palevioletred;
+    color: white;
+    transition: all 0.4s;
+}
+/* .category{
+    display: inline-block;
+    /* padding: .3rem 1.1rem;
+    border: 1px solid black;
+    border-radius: .5rem; */
+    /* text-decoration: wavy; */
+/* } 
+/* .PHP{
+    background-color: #556096;
+    color: white;
+}
+.JS{
+    background-color: #d7bc39;
+}
+.Laravel{
+    background-color: #da1d18;
+    color: white;
+}
+.Vue{
+    background-color: #53bc8b;
+    color: white;
+} */

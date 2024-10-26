@@ -1,12 +1,12 @@
 <?php 
     session_start();
-    if ($_SESSION['loggedin'] === false) {
+    if (!isset($_SESSION["loggedin"]) || $_SESSION['loggedin'] === false) {
         header("location: login.php");
     }
     require_once "./config.php";
     $postsQuery =
     "SELECT posts.id, posts.image, posts.title, categories.* FROM`posts`
-    JOIN `categories` ON posts.category_id = categories.id";
+    JOIN `categories` ON posts.category_id = categories.id ORDER BY posts.id desc";
 
     $postsResult = $link->query($postsQuery);
     mysqli_close($link);
@@ -38,6 +38,10 @@
                         <img src="<?php echo $row["image"] ?>" alt="<?php echo $row["title"] ?> name">
                         <h2><?php echo $row["title"] ?></h2>
                         <p><?php echo $row["name"] ?></p>
+                        <form action="./show.php" method="POST">
+                            <input type="text" value="<?php echo $row["title"]?>" name="postTitle" hidden>
+                            <button type="submit" class="show-button">Show</button>
+                        </form>
                     </div>
                 <?php } ?>
             <?php } ?>
