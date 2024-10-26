@@ -98,6 +98,32 @@ form{
     color: white;
     transition: all 0.4s;
 }
+.delete-button{
+    background-color: red;
+    padding: .7rem 1rem;
+    border: 1px solid red;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.delete-button:hover{
+    background-color: brown;
+    color: white;
+    transition: all 0.4s;
+}
+.update-button{
+    background-color: green;
+    padding: .7rem 1rem;
+    border: 1px solid green;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.update-button:hover{
+    background-color: greenyellow;
+    color: white;
+    transition: all 0.4s;
+}
 /* .category{
     display: inline-block;
     /* padding: .3rem 1.1rem;

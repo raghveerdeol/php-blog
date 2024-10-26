@@ -110,7 +110,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </nav>
         </header>
         <main>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="signUp" enctype="multipart/formdata">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="signUp" enctype="multipart/form-data">
                 
                 <div>
                     <label for="username">Username</label>

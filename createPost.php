@@ -80,7 +80,7 @@
         </nav>
     </header>
     <main>
-        <form method="POST" class="post-form" action="./createPost.php" enctype="multipart/formdata">
+        <form method="POST" class="post-form" action="./createPost.php" enctype="multipart/form-data">
             <!-- title input  -->
             <div>
                 <label for="title">Title</label>
