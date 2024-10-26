@@ -19,7 +19,7 @@ body{
     justify-content: space-around;
     width: 10vw;
 }
-.actions > a {
+.buttons{
     border: 1px solid pink;
     border-radius: .5rem;
     padding: 1rem 1.5rem;
@@ -31,36 +31,45 @@ body{
     text-wrap: nowrap;
     transition: all 0.4s;
 }
-.actions > a:hover{
+.buttons:hover{
     background-color: palevioletred;
     color: white;
     transition: all 0.4s;
+    cursor: pointer;
 }
-
-
 main{
     width: 100vw;
     height: 90vh;
     overflow: scroll;
 }
-.cards-container{
+.post-form{
+    margin: 3rem auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
-.card{
-    background-color: cornsilk;
+.post-form > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+input,
+textarea{
     width: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 3rem 0rem;
-    padding: 2.5rem;
-}
-.card > img{
-    width: 100%;
-    object-fit: contain;
-}
-.card > h2{
+    padding: 1rem;
     margin: 1rem 0;
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    border-radius: .5rem;
+}
+label{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#submit{
+    background-color: cornsilk;
+}
+#submit:hover{
+    background-color:sienna;
 }

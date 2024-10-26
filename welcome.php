@@ -5,7 +5,7 @@
     }
     require_once "./config.php";
     $postsQuery =
-    "SELECT posts.image, posts.title, categories.* FROM`posts`
+    "SELECT posts.id, posts.image, posts.title, categories.* FROM`posts`
     JOIN `categories` ON posts.category_id = categories.id";
 
     $postsResult = $link->query($postsQuery);
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./style/indexStyle.css">
 </head>
 <body>
-<header>
+    <header>
         <nav class="navbar">
             <div>ICON</div>
             <div class="actions">
