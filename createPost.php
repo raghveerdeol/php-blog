@@ -74,6 +74,7 @@
         <nav class="navbar">
             <div>ICON</div>
             <div class="actions">
+                <a href="./welcome.php" class="buttons">Home</a>
                 <a href="./logout.php" class="buttons">Logout</a>
             </div>
         </nav>

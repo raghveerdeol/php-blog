@@ -25,6 +25,7 @@
         <nav class="navbar">
             <div>ICON</div>
             <div class="actions">
+                <a href="./createPost.php">Create Post</a>
                 <a href="./logout.php">Logout</a>
             </div>
         </nav>
