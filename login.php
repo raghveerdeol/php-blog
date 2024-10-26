@@ -88,22 +88,30 @@
         <title>Login</title>
     </head>
     <body>
-        <header></header>
+        <header>
+            <nav class="navbar">
+                <div>ICON</div>
+                <div class="actions">
+                    <a href="./register.php" class="buttons">Sign up</a>
+                    <link rel="stylesheet" href="./style/login.css">
+                </div>
+            </nav>
+        </header>
         <Main>
 
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" enctype="multipart/formdata">
             <div>
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" class="<?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>" >
-                <span class="usernameError"><?php echo $username_err ?></span>
+                <span class="<?php echo (!empty($username_err)) ? 'errorInput' : ''; ?>"><?php echo $username_err ?></span>
             </div>
             <div>
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password" class="<?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
-                <span class="passwordError" ><?php echo $password_err ?></span>
+                <span class="<?php echo (!empty($username_err)) ? 'errorInput' : ''; ?>" ><?php echo $password_err ?></span>
             </div>
-            <div>
-                <button type="submit" value="Login">Submit</button>
+            <div class="buttons-container">
+                <button type="submit" value="Login" class="buttons form-buttons">Submit</button>
             </div>
         </form>
         <p>Don't have an account? <a href="./register.php">Sign up now</a>.</p>

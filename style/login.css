@@ -42,48 +42,52 @@ main{
     height: 90vh;
     overflow: scroll;
 }
-.post-form{
-    margin: 3rem auto;
+
+form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    width: 100vw;
+    margin: 3rem;
 }
-.post-form > div{
+form > div{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    width: 600px;
+    width: 400px;
 }
-input,
-textarea{
-    width: 600px;
-    padding: 1rem;
-    margin: 1rem 0;
+label{
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+input{
+    width: 100%;
     border: 1px solid black;
     border-bottom: 2px solid black;
     border-radius: .5rem;
+    margin-bottom: 1rem;
+    padding: .7rem;
 }
-select{
+.buttons-container{
+    flex-direction: row;
+}
+.form-buttons{
+    background-color: sienna;
+}
+.errorInput{
     padding: 1rem;
-    border: 1px solid black;
-    background-color:brown;
-    border-radius: .5rem;
     color: white;
     font-weight: 600;
     text-transform: capitalize;
+    border: 1px solid palevioletred;
+    border-radius: .7rem;
+    background-color:crimson ;
+    margin-bottom: .7rem;
 }
-label{
-    text-transform: uppercase;
-    font-weight: 600;
-}
-#submit{
-    margin-top: 2rem;
-    background-color: cornsilk;
-    align-self: center;
-}
-#submit:hover{
-    background-color:sienna;
+
+p{
+    text-align: center;
 }

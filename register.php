@@ -97,33 +97,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sign Up</title>
+        <link rel="stylesheet" href="./style/login.css">
     </head>
     <body>
-        <header></header>
+        <header>
+            <nav class="navbar">
+                <div>ICON</div>
+                <div class="actions">
+                    <a href="./login.php" class="buttons">Login</a>
+                    <link rel="stylesheet" href="./style/login.css">
+                </div>
+            </nav>
+        </header>
         <main>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="signUp">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="signUp" enctype="multipart/formdata">
                 
                 <div>
                     <label for="username">Username</label>
                     <input type="text" name="username" id="username" class="<?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
-                    <span class="usernameError"><?php echo $username_err; ?></span>
+                    <span class="<?php echo (!empty($username_err)) ? 'errorInput' : ''; ?>"><?php echo $username_err; ?></span>
                 </div>
 
                 <div>
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" class="<?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
-                    <span class="passwordError"><?php echo $password_err; ?></span>
+                    <span class="<?php echo (!empty($username_err)) ? 'errorInput' : ''; ?>"><?php echo $password_err; ?></span>
                 </div>
 
                 <div>
                     <label for="confirm_password">Confirm Password</label>
                     <input type="password" name="confirm_password" id="confirm_password" class="<?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
-                    <span class="confirmPasswordError"><?php echo $confirm_password_err; ?></span>
+                    <span class="<?php echo (!empty($username_err)) ? 'errorInput' : ''; ?>"><?php echo $confirm_password_err; ?></span>
                 </div>
                     
-                <div>
-                    <button type="submit" value="submit">Sign up</button>
-                    <button type="reset" value="reset">Reset</button>
+                <div class="buttons-container">
+                    <button type="submit" class="buttons form-buttons" value="submit">Sign up</button>
+                    <button type="reset" class="buttons form-buttons" value="reset">Reset</button>
                 </div>
             </form>
 

@@ -5,6 +5,8 @@
     }
     
     require_once './config.php';
+    $categorieQuery = "SELECT * FROM`categories`";
+    $categoriesResult = $link->query($categorieQuery);
 
     $title = '';
     $content = '';
@@ -77,7 +79,7 @@
         </nav>
     </header>
     <main>
-        <form method="POST" class="post-form" action="./createPost.php">
+        <form method="POST" class="post-form" action="./createPost.php" enctype="multipart/formdata">
             <!-- title input  -->
             <div>
                 <label for="title">Title</label>
@@ -96,10 +98,14 @@
                 <input type="text" id="image" name="image" placeholder="Image link" value="<?php echo $image ?>">
                 <span class="error"><?php echo $image_err ?></span>
             </div>
-            <div>
+            <div class="select-container">
                 <select name="category_id" id="category_id">
                     <option value="Select Category">Select Category</option>
-                    <option value="1">1</option>
+                    <?php if (mysqli_num_rows($categoriesResult) > 0) { ?>
+                        <?php while($row = mysqli_fetch_assoc($categoriesResult)) {?>
+                            <option value="<?php echo $row['id'] ?>"><?php echo $row['name'] ?></option>
+                        <?php } ?>
+                    <?php } ?>
                 </select>
             </div>
             <div>
