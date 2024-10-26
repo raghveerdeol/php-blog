@@ -2,8 +2,8 @@
 session_start();
 require_once "./config.php";
 
-$postsQuery = "SELECT * FROM `posts`";
-$result = $link->query($postsQuery);
+$postsQuery = "SELECT posts.*, categories.name FROM `posts` INNER JOIN `categories`";
+$postsResult = $link->query($postsQuery);
 
 ?>
 
@@ -19,12 +19,12 @@ $result = $link->query($postsQuery);
     <header></header>
     <main>
         <div class="cards-container">
-            <?php if(mysqli_num_rows($result) > 0) {?>
-                <?php while($row = mysqli_fetch_assoc($result)) {?>
+            <?php if(mysqli_num_rows($postsResult) > 0) {?>
+                <?php while($row = mysqli_fetch_assoc($postsResult)) {?>
                     <div class="card">
                     <img src="<?php echo $row["image"] ?>" alt="<?php echo $row["title"] ?> name">
                     <h2><?php echo $row["title"] ?></h2>
-                    <p><?php echo $row["content"] ?></p>
+                    <p><?php echo $row["name"] ?></p>
                 </div>
             <?php } ?>
             <?php } ?>
