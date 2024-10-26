@@ -6,6 +6,41 @@
 body{
     background-color: pink;
 }
+.navbar{
+    width: 100vw;
+    height: 10vh;
+    background-color: cornsilk;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.actions{
+    display: flex;
+    justify-content: space-around;
+    width: 10vw;
+}
+.actions > a {
+    border: 1px solid pink;
+    border-radius: .5rem;
+    padding: 1rem 1.5rem;
+    background-color: pink;
+    margin-right: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-wrap: nowrap;
+}
+.actions > a:hover{
+    background-color: palevioletred;
+    color: white;
+}
+
+
+main{
+    width: 100vw;
+    height: 90vh;
+    overflow: scroll;
+}
 .cards-container{
     display: flex;
     flex-direction: column;
