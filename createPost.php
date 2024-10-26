@@ -84,19 +84,19 @@
             <div>
                 <label for="title">Title</label>
                 <input type="text" id="title" name="title" placeholder="Title" value="<?php echo $title ?>">
-                <span class="error"><?php echo $title_err ?></span>
+                <span class="<?php echo (!empty($title_err)) ? 'errorInput' : '' ?>"><?php echo $title_err ?></span>
             </div>
             <!-- content input  -->
             <div>
                 <label for="content">Content</label>
                 <textarea type="text" id="content" name="content" placeholder="Content"><?php echo $content ?></textarea>
-                <span class="error"><?php echo $content_err ?></span>
+                <span class="<?php echo (!empty($content_err)) ? 'errorInput' : '' ?>"><?php echo $content_err ?></span>
             </div>
             <!-- image value  -->
             <div>
                 <label for="image">Image</label>
                 <input type="text" id="image" name="image" placeholder="Image link" value="<?php echo $image ?>">
-                <span class="error"><?php echo $image_err ?></span>
+                <span class="<?php echo (!empty($image_err)) ? 'errorInput' : '' ?>"><?php echo $image_err ?></span>
             </div>
             <div class="select-container">
                 <select name="category_id" id="category_id">

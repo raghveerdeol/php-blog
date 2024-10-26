@@ -87,3 +87,16 @@ label{
 #submit:hover{
     background-color:sienna;
 }
+
+.errorInput{
+    padding: .4rem;
+    color: white;
+    font-weight: 600;
+    text-transform: capitalize;
+    border: 1px solid palevioletred;
+    border-radius: .7rem;
+    background-color:crimson ;
+    margin-bottom: .7rem;
+    width: 100%;
+    text-align: center;
+}

@@ -78,7 +78,7 @@ input{
     background-color: sienna;
 }
 .errorInput{
-    padding: 1rem;
+    padding: .4rem;
     color: white;
     font-weight: 600;
     text-transform: capitalize;
@@ -86,6 +86,8 @@ input{
     border-radius: .7rem;
     background-color:crimson ;
     margin-bottom: .7rem;
+    width: 100%;
+    text-align: center;
 }
 
 p{
