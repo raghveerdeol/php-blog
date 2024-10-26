@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // redirect login page 
                 header("location: login.php");
             } else {
-                echo "Something wen wrong. Try again.";
+                echo "Something went wrong. Try again.";
             }
 
             mysqli_stmt_close($stmt);

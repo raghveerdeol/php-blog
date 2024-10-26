@@ -95,7 +95,7 @@
             <div>
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" class="<?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>" >
-                <span class="usernameError"><?php echo $username_err; ?></span>
+                <span class="usernameError"><?php echo $username_err ?></span>
             </div>
             <div>
                 <label for="password">Password</label>
