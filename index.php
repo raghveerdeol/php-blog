@@ -2,8 +2,12 @@
 session_start();
 require_once "./config.php";
 
-$postsQuery = "SELECT posts.*, categories.name FROM `posts` INNER JOIN `categories`";
+$postsQuery =
+    "SELECT posts.image, posts.title, categories.* FROM`posts`
+    JOIN `categories` ON posts.category_id = categories.id";
+
 $postsResult = $link->query($postsQuery);
+mysqli_close($link);
 
 ?>
 
