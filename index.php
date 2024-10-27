@@ -29,8 +29,8 @@
             <nav class="navbar">
                 <div>ICON</div>
                 <div class="actions">
-                    <a href="./login.php">Login</a>
-                    <a href="./register.php">Sign up</a>
+                    <a class="buttons" href="./login.php">Login</a>
+                    <a class="buttons" href="./register.php">Sign up</a>
                 </div>
             </nav>
         </header>
