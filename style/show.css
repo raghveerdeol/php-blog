@@ -4,12 +4,12 @@
     box-sizing: border-box;
 }
 body{
-    background-color: pink;
+    background-color: #EF7C8E;
 }
 .navbar{
     width: 100vw;
     height: 10vh;
-    background-color: cornsilk;
+    background-color: #FAE8E0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -25,10 +25,10 @@ body{
     width: 10vw;
 }
 .actions > a {
-    border: 1px solid pink;
+    border: 1px solid #B6E2D3;
     border-radius: .5rem;
     padding: 1rem 1.5rem;
-    background-color: pink;
+    background-color: #B6E2D3;
     margin-right: 1rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -37,8 +37,8 @@ body{
     transition: all 0.4s;
 }
 .actions > a:hover{
-    background-color: palevioletred;
-    color: white;
+    background-color: green;
+    color: #FAE8E0;
     transition: all 0.4s;
 }
 main{
@@ -52,13 +52,13 @@ main{
     align-items: center;
 }
 .card{
-    background-color: cornsilk;
-    width: 700px;
+    background-color: #FAE8E0;
+    width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    margin-top: 3rem;
+    margin: 3rem 0;
 }
 .card > img{
     width: 100%;
@@ -72,7 +72,7 @@ main{
     display: flex;
     flex-direction: column;
     line-height: 1.5rem;
-    background-color: antiquewhite;
+    background-color: #FAE8E0;
 }
 .info > h2,
 .info > p{
@@ -80,15 +80,15 @@ main{
 }
 
 .update-button{
-    background-color: green;
+    background-color: #B6E2D3;
     padding: .7rem 1rem;
-    border: 1px solid green;
+    border: 1px solid #B6E2D3;
     border-radius: .5rem;
     cursor: pointer;
     transition: all 0.4s;
 }
 .update-button:hover{
-    background-color: greenyellow;
-    color: white;
+    background-color: green;
+    color: #FAE8E0;
     transition: all 0.4s;
 }

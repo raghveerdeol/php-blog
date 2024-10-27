@@ -90,7 +90,7 @@
     <body>
         <header>
             <nav class="navbar">
-                <div>ICON</div>
+                <a href="./index.php">ICON</a>
                 <div class="actions">
                     <a href="./register.php" class="buttons">Sign up</a>
                     <link rel="stylesheet" href="./style/login.css">

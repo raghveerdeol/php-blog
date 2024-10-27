@@ -59,16 +59,14 @@
         if (empty($title_err) && empty($content_err) && empty($image_err)) {
             # code...
             var_dump($title);
-            $sql = "UPDATE posts SET title = ?, content = ?, image = ?, category_id = ? WHERE id = ?";
+            $updateSql = "UPDATE posts SET title = ?, content = ?, image = ?, category_id = ? WHERE id = ?";
 
-            if ($stmt = mysqli_prepare($link, $sql)) {
+            if ($stmt = mysqli_prepare($link, $updateSql)) {
                 mysqli_stmt_bind_param($stmt, "sssii", $title, $content, $image,  $category_id, $postId);
                 if (mysqli_stmt_execute($stmt)) {
                     // redirect 
-                    var_dump($_POST);
+                    header('location: welcome.php');
                     exit;
-                    // header('location: welcome.php');
-                    // exit;
                 } else {
                     echo "Something went wrong. Try again.";
                 }

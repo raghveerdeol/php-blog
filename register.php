@@ -102,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <body>
         <header>
             <nav class="navbar">
-                <div>ICON</div>
+                <a href="./index.php">ICON</a>
                 <div class="actions">
                     <a href="./login.php" class="buttons">Login</a>
                     <link rel="stylesheet" href="./style/login.css">
