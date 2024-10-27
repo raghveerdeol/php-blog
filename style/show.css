@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: pink;
+}
+.navbar{
+    width: 100vw;
+    height: 10vh;
+    background-color: cornsilk;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+.navbar > a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.actions{
+    display: flex;
+    justify-content: space-around;
+    width: 10vw;
+}
+.actions > a {
+    border: 1px solid pink;
+    border-radius: .5rem;
+    padding: 1rem 1.5rem;
+    background-color: pink;
+    margin-right: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-wrap: nowrap;
+    transition: all 0.4s;
+}
+.actions > a:hover{
+    background-color: palevioletred;
+    color: white;
+    transition: all 0.4s;
+}
+main{
+    width: 100vw;
+    height: 90vh;
+    overflow: scroll;
+}
+.cards-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card{
+    background-color: cornsilk;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+.card > img{
+    width: 100%;
+    object-fit: contain;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+.info{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5rem;
+    background-color: antiquewhite;
+}
+.info > h2,
+.info > p{
+    margin-bottom: 1rem;
+}
+
+.update-button{
+    background-color: green;
+    padding: .7rem 1rem;
+    border: 1px solid green;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.update-button:hover{
+    background-color: greenyellow;
+    color: white;
+    transition: all 0.4s;
+}

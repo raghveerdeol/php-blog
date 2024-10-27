@@ -20,12 +20,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <link rel="stylesheet" href="./style/indexStyle.css">
+    <link rel="stylesheet" href="./style/show.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div>ICON</div>
+            <?php if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {?>
+                <a href="./index.php">ICON</a>
+            <?php } else {?>
+                <a href="./welcome.php">ICON</a>
+            <?php } ?>
             <div class="actions">
                 <?php if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {?>
                     <a href="./login.php">Login</a>
@@ -42,9 +46,19 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 <?php while($row = mysqli_fetch_assoc($postResult)) {?>
                     <div class="card">
                         <img src="<?php echo $row["image"] ?>" alt="<?php echo $row["title"] ?> name">
-                        <h2><?php echo $row["title"] ?></h2>
-                        <p><?php echo $row["name"] ?></p>
-                        <p><?php echo $row["content"] ?></p>
+                        <div class="info">
+                            <h2><?php echo $row["title"] ?></h2>
+                            <p><em><?php echo $row["name"] ?></em></p>
+                            <p><?php echo $row["content"] ?></p>
+
+                            <?php if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true) {?>
+                                <!-- edit button  -->
+                                <form action="./edit.php" method="GET">
+                                    <input type="text" value="<?php echo $row["title"]?>" name="postTitle" hidden>
+                                    <button type="submit" class="update-button">Edit</button>
+                                </form>
+                            <?php } ?>
+                        </div>
                     </div>
                 <?php } ?>
         </div>

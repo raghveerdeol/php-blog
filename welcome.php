@@ -45,7 +45,7 @@
                                     <input type="text" value="<?php echo $row["title"]?>" name="postTitle" hidden>
                                     <button type="submit" class="show-button">Show</button>
                                 </form>
-                                <!-- update button  -->
+                                <!-- edit button  -->
                                 <form action="./edit.php" method="GET">
                                     <input type="text" value="<?php echo $row["title"]?>" name="postTitle" hidden>
                                     <button type="submit" class="update-button">Edit</button>
