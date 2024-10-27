@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $stmt->bind_param("s", $postTitle);
     $stmt->execute();
     $postResult = $stmt->get_result();
-
+    mysqli_close($link);
 }
 ?>
 

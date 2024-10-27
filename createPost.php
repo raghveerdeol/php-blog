@@ -50,12 +50,14 @@
                 if (mysqli_stmt_execute($stmt)) {
                     // redirect 
                     header('location: welcome.php');
+                    exit;
                 } else {
                     echo "Something went wrong. Try again.";
                 }
             }
         }
     }
+    mysqli_close($link);
 
 
 

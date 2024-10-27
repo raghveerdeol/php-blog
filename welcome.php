@@ -24,6 +24,12 @@
     <header>
         <nav class="navbar">
             <div>ICON</div>
+            <div>
+                <form action="./search.php" method="POST">
+                    <input type="text" name="search" id="search" value="">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
             <div class="actions">
                 <a href="./createPost.php">Create Post</a>
                 <a href="./logout.php">Logout</a>

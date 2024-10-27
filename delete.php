@@ -15,7 +15,8 @@
         $stmt->execute();
         $postResult = $stmt->get_result();
         header('location: welcome.php');
+        exit;
     }
-
+    mysqli_close($link);
 
 ?>
