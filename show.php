@@ -51,13 +51,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                             <p><em><?php echo $row["name"] ?></em></p>
                             <p><?php echo $row["content"] ?></p>
 
-                            <?php if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true) {?>
-                                <!-- edit button  -->
-                                <form action="./edit.php" method="GET">
-                                    <input type="text" value="<?php echo $row["title"]?>" name="postTitle" hidden>
-                                    <button type="submit" class="update-button">Edit</button>
-                                </form>
-                            <?php } ?>
+                            <?php if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {?>
+                                
+                                <?php } else { ?>
+                                    <!-- edit button  -->
+                                    <form action="./edit.php" method="GET">
+                                        <input type="text" value="<?php echo $row["title"]?>" name="postTitle" hidden>
+                                        <button type="submit" class="update-button">Edit</button>
+                                    </form>
+                                    
+                                <?php } ?>
                         </div>
                     </div>
                 <?php } ?>
