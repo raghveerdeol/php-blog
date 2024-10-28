@@ -107,7 +107,6 @@
             </div>
             <div class="select-container">
                 <select name="category_id" id="category_id">
-                    <option value="Select Category">Select Category</option>
                     <?php if (mysqli_num_rows($categoriesResult) > 0) { ?>
                         <?php while($row = mysqli_fetch_assoc($categoriesResult)) {?>
                             <option value="<?php echo $row['id'] ?>"><?php echo $row['name'] ?></option>
