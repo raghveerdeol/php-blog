@@ -1,5 +1,5 @@
-const form = document.querySelector('form.post-form');
-const button = document.querySelector('button#submit');
+const post_form = document.querySelector('form.post-form');
+const button = document.querySelector('button#submit-button');
 
 
 button.addEventListener('click', (event) => {
@@ -29,6 +29,7 @@ button.addEventListener('click', (event) => {
     }
 
     if ((title.length >= 3 && title.length <= 255) && (content.length >= 20 && content.length <= 5000) && (image.length >= 6 && image.length <= 255)) {
-        form.submit();
-    }
+        post_form.submit();
+    } 
+    
 });

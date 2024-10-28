@@ -115,7 +115,7 @@
                 </select>
             </div>
             <div>
-                <button class="buttons" value="submit" id="submit">Submit</button>
+                <button class="buttons" id="submit-button">Submit</button>
             </div>
         </form>
     </main>

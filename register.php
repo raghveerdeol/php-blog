@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </nav>
         </header>
         <main>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="signUp" enctype="multipart/form-data" class="data-form" >
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="signUp" enctype="multipart/form-data">
                 
                 <div>
                     <label for="username">Username</label>
@@ -135,7 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                     
                 <div class="buttons-container">
-                    <button class="buttons form-buttons" id="submit" value="submit">Sign up</button>
+                    <button class="buttons form-buttons" id="submit-button">Sign up</button>
                     <button type="reset" class="buttons form-buttons" id="reset" value="reset">Reset</button>
                 </div>
             </form>

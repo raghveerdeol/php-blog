@@ -131,7 +131,7 @@
                         </select>
                     </div>
                     <div>
-                        <button type="submit" class="buttons" value="submit" id="submit">Update</button>
+                        <button class="buttons" id="submit-button">Update</button>
                     </div>
                 </form>
             <?php } ?>

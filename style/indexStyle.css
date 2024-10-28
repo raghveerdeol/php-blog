@@ -198,6 +198,25 @@ form{
     color: white;
     transition: all 0.4s;
 }
+#delete-confirm{
+    text-align: center;
+}
+.delete-button > p{
+    margin-bottom: .7rem;
+}
+#cancel{
+    background-color: orange;
+    padding: .7rem 1rem;
+    border: 1px solid orange;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+#cancel:hover{
+    background-color: goldenrod;
+    color: white;
+    transition: all 0.4s;
+}
 .update-button{
     background-color: #B6E2D3;
     padding: .7rem 1rem;
@@ -218,9 +237,6 @@ form{
     top: 45vh;
 }
 
-.hidden{
-    display: none;
-}
 .image_err{
     width: 100%;
     background-color: red;
@@ -230,4 +246,7 @@ form{
 }
 .image_err::before{
     content: 'Add a file.';
+}
+.hidden{
+    display: none;
 }

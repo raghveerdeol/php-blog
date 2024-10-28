@@ -122,8 +122,8 @@ label{
     content: 'The title must be at least 3 characters.';
 }
 .content_err::before{
-    content: 'The content must be at least 3 characters.';
+    content: 'The content must be at least 20 characters.';
 }
 .image_err::before{
-    content: 'The title must be at least 3 characters.';
+    content: 'The title must be at least 6 characters.';
 }

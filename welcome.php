@@ -52,12 +52,12 @@
                         <div class="avatar-container" id="opacity">
                             <img src="./uploads/avatar.jpg" alt="no-foto"  id="avatar" class="add-foto">
                         </div>
-                        <form action="./photoUpload.php" method="POST" class="hidden" enctype="multipart/form-data" id="form-upload">
-                            <input type="file" name="fileToUpload" id="fileToUpload" class="hidden" >
-                            <button id="upload" class="hidden">Upload</button>
-                        </form>
+                    <?php } ?>
                 <?php } ?>
-            <?php } ?>
+            <form action="./photoUpload.php" method="POST" class="hidden" enctype="multipart/form-data" id="form-upload">
+                <input type="file" name="fileToUpload" id="fileToUpload" class="hidden" >
+                <button id="upload" class="hidden">Upload</button>
+            </form>
             <span id="image_validation"></span>
             <div class="user-info">
                 <h1>Welcome<div class="user-name"><?php echo $_SESSION['username'] ?></div></h1>
@@ -85,12 +85,17 @@
                                         <button type="submit" class="update-button">Edit</button>
                                     </form>
                                     <!-- delete button  -->
-                                    <form action="./delete.php" method="POST">
-                                        <input type="text" value="<?php echo $row["title"]?>" name="postTitle" hidden>
-                                        <button type="submit" class="delete-button">Delete</button>
-                                    </form>
+                                        <button class="delete-button" id="delete">Delete</button>
                                 <?php } ?>
                             </div>
+                        </div>
+                        <div id="delete-confirm" class="hidden"> 
+                            <p>Are you sure?</p>
+                            <form action="./delete.php" method="POST">
+                                <input type="text" value="<?php echo $row["title"]?>" name="postTitle" hidden>
+                                <button type="submit" class="delete-button" id="yes-delete">Delete</button>
+                            </form>
+                            <button id="cancel">Cancel</button>
                         </div>
                     </div>
                 <?php } ?>

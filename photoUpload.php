@@ -51,11 +51,11 @@
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
             // Query per inserire il percorso nel database
-            $sql = "UPDATE users SET image = '$target_file' WHERE id = ?"; // Usa un ID specifico
+            $sql = "UPDATE users SET image = '$target_file' WHERE id = ?"; 
 
-            // Usa prepared statement per maggiore sicurezza
+    
             $stmt = $link->prepare($sql);
-            $stmt->bind_param("i", $userId); // Assicurati che $user_id sia definito
+            $stmt->bind_param("i", $userId);
             
             if ($stmt->execute()) {
                 $_SESSION['upload_err'] = "Image path saved to database successfully.";
@@ -71,6 +71,6 @@
         }
     }
 
-    $conn->close();
+    $link->close();
 
 ?>
