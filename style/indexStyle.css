@@ -150,3 +150,9 @@ form{
     color: white;
     transition: all 0.4s;
 }
+
+.empty-search{
+    font-size: 2rem;
+    position: relative;
+    top: 45vh;
+}

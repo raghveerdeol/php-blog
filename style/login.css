@@ -116,10 +116,10 @@ p{
     margin-bottom: 1rem;
 }
 .username_err::before{
-    content: 'Username must be at leaste 3 characters.';
+    content: 'Username must be at least 3 characters.';
 }
 .password_err::before{
-    content: 'Password must be at leaste 6 characters.';
+    content: 'Password must be at least 6 characters.';
 }
 .confirm_password_err::before{
     content: 'The Password is different.';

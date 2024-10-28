@@ -71,6 +71,8 @@
                         </div>
                     </div>
                 <?php } ?>
+            <?php } else {?>
+                <div class="empty-search">There is no match.</div>
             <?php } ?>
         </div>
     </main>

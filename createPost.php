@@ -89,18 +89,21 @@
                 <label for="title">Title</label>
                 <input type="text" id="title" name="title" placeholder="Title" value="<?php echo $title ?>">
                 <span class="<?php echo (!empty($title_err)) ? 'errorInput' : '' ?>"><?php echo $title_err ?></span>
+                <span id="title_validation"></span>
             </div>
             <!-- content input  -->
             <div>
                 <label for="content">Content</label>
                 <textarea type="text" id="content" name="content" placeholder="Content"><?php echo $content ?></textarea>
                 <span class="<?php echo (!empty($content_err)) ? 'errorInput' : '' ?>"><?php echo $content_err ?></span>
+                <span id="content_validation"></span>
             </div>
             <!-- image value  -->
             <div>
                 <label for="image">Image</label>
                 <input type="text" id="image" name="image" placeholder="Image link" value="<?php echo $image ?>">
                 <span class="<?php echo (!empty($image_err)) ? 'errorInput' : '' ?>"><?php echo $image_err ?></span>
+                <span id="image_validation"></span>
             </div>
             <div class="select-container">
                 <select name="category_id" id="category_id">
@@ -113,9 +116,10 @@
                 </select>
             </div>
             <div>
-                <button type="submit" class="buttons" value="submit" id="submit">Submit</button>
+                <button class="buttons" value="submit" id="submit">Submit</button>
             </div>
         </form>
     </main>
+    <script src="./scripts/postForm.js"></script>
 </body>
 </html>

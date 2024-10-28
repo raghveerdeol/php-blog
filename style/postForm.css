@@ -109,3 +109,21 @@ label{
     width: 100%;
     text-align: center;
 }
+.validation_err{
+    padding: .7rem;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: red;
+    margin-bottom: 1rem;
+}
+.title_err::before{
+    content: 'The title must be at least 3 characters.';
+}
+.content_err::before{
+    content: 'The content must be at least 3 characters.';
+}
+.image_err::before{
+    content: 'The title must be at least 3 characters.';
+}
