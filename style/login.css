@@ -105,3 +105,22 @@ input{
 p{
     text-align: center;
 }
+
+.validation_err{
+    padding: .7rem;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: red;
+    margin-bottom: 1rem;
+}
+.username_err::before{
+    content: 'Username must be at leaste 3 characters.';
+}
+.password_err::before{
+    content: 'Password must be at leaste 6 characters.';
+}
+.confirm_password_err::before{
+    content: 'The Password is different.';
+}

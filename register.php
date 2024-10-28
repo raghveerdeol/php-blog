@@ -111,33 +111,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </nav>
         </header>
         <main>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="signUp" enctype="multipart/form-data">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="signUp" enctype="multipart/form-data" class="data-form" >
                 
                 <div>
                     <label for="username">Username</label>
                     <input type="text" name="username" id="username" class="<?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
                     <span class="<?php echo (!empty($username_err)) ? 'errorInput' : ''; ?>"><?php echo $username_err; ?></span>
+                    <span id="username_validation"></span>
                 </div>
 
                 <div>
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" class="<?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
                     <span class="<?php echo (!empty($username_err)) ? 'errorInput' : ''; ?>"><?php echo $password_err; ?></span>
+                    <span id="password_validation"></span>
                 </div>
 
                 <div>
                     <label for="confirm_password">Confirm Password</label>
                     <input type="password" name="confirm_password" id="confirm_password" class="<?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
                     <span class="<?php echo (!empty($username_err)) ? 'errorInput' : ''; ?>"><?php echo $confirm_password_err; ?></span>
+                    <span id="confirm_password_validation"></span>
                 </div>
                     
                 <div class="buttons-container">
-                    <button type="submit" class="buttons form-buttons" value="submit">Sign up</button>
-                    <button type="reset" class="buttons form-buttons" value="reset">Reset</button>
+                    <button class="buttons form-buttons" id="submit" value="submit">Sign up</button>
+                    <button type="reset" class="buttons form-buttons" id="reset" value="reset">Reset</button>
                 </div>
             </form>
 
             <p>Already have an account? <a href="./login.php">Login here</a></p>
         </main>
+        <script src="./scripts/register.js"></script>
     </body>
 </html>

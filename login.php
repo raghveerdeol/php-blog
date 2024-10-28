@@ -100,22 +100,25 @@
         </header>
         <Main>
 
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" enctype="multipart/form-data">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" enctype="multipart/form-data" class="data-form">
             <div>
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" class="<?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>" >
                 <span class="<?php echo (!empty($username_err)) ? 'errorInput' : ''; ?>"><?php echo $username_err ?></span>
+                <span id="username_validation"></span>
             </div>
             <div>
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password" class="<?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
                 <span class="<?php echo (!empty($username_err)) ? 'errorInput' : ''; ?>" ><?php echo $password_err ?></span>
+                <span id="password_validation"></span>
             </div>
             <div class="buttons-container">
-                <button type="submit" value="Login" class="buttons form-buttons">Submit</button>
+                <button value="Login" class="buttons form-buttons">Submit</button>
             </div>
         </form>
         <p>Don't have an account? <a href="./register.php">Sign up now</a>.</p>
         </Main>
+        <script src="./scripts/login.js"></script>
     </body>
 </html>
