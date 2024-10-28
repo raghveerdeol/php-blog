@@ -18,6 +18,13 @@ body{
 .navbar > a{
     text-decoration: none;
     cursor: pointer;
+    font-size: 1.7rem;
+    color: hotpink;
+    transition: all 1s;
+}
+.navbar > a:hover{
+    color: #d845d3;
+    transition: all 1s;
 }
 .actions{
     display: flex;
@@ -78,6 +85,9 @@ main{
 .info > p{
     margin-bottom: 1rem;
 }
+form{
+    display: inline-block;
+}
 
 .update-button{
     background-color: #B6E2D3;
@@ -90,5 +100,18 @@ main{
 .update-button:hover{
     background-color: green;
     color: #FAE8E0;
+    transition: all 0.4s;
+}
+.delete-button{
+    background-color: red;
+    padding: .7rem 1rem;
+    border: 1px solid red;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.delete-button:hover{
+    background-color: brown;
+    color: white;
     transition: all 0.4s;
 }

@@ -73,7 +73,6 @@
             }
         }
     }
-
 ?>
 
 <!DOCTYPE html>
@@ -83,14 +82,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Post</title>
     <link rel="stylesheet" href="./style/postForm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div>ICON</div>
+            <a href="./welcome.php"><i class="fa-solid fa-paw"></i></a>
             <div class="actions">
                 <a href="./welcome.php" class="buttons">Home</a>
-                <a href="./logout.php" class="buttons">Logout</a>
+                <a href="./logout.php" class="buttons"><i class="fa-solid fa-right-from-bracket"></i></a>
             </div>
         </nav>
     </header>

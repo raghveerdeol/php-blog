@@ -15,6 +15,15 @@ body{
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
+.navbar > a{
+    font-size: 1.7rem;
+    color: hotpink;
+    transition: all 1s;
+}
+.navbar > a:hover{
+    color: #d845d3;
+    transition: all 1s;
+}
 .actions{
     display: flex;
     justify-content: space-around;
