@@ -8,7 +8,11 @@
     "SELECT posts.id, posts.image, posts.title, posts.user_id,categories.* FROM`posts`
     JOIN `categories` ON posts.category_id = categories.id ORDER BY posts.id desc";
 
+    $userId = $_SESSION['id'];
+    $userImage = "SELECT users.image FROM `users` WHERE id = '$userId'";
+
     $postsResult = $link->query($postsQuery);
+    $imageResult = $link->query($userImage);
 
 ?>
 <!DOCTYPE html>
@@ -36,7 +40,30 @@
             </div>
         </nav>
     </header>
+
     <main>
+        <section class="welcome">
+            <?php while($row = mysqli_fetch_assoc($imageResult)) {?>
+                <?php if($row['image']) {?>
+                    <div class="avatar-container">
+                        <img src="<?php echo $row['image'] ?>" alt="<?php echo $_SESSION['username'] ?>.foto"  id="avatar">
+                    </div>
+                    <?php } else {?>
+                        <div class="avatar-container" id="opacity">
+                            <img src="./uploads/avatar.jpg" alt="no-foto"  id="avatar" class="add-foto">
+                        </div>
+                        <form action="./photoUpload.php" method="POST" class="hidden" enctype="multipart/form-data" id="form-upload">
+                            <input type="file" name="fileToUpload" id="fileToUpload" class="hidden" >
+                            <button id="upload" class="hidden">Upload</button>
+                        </form>
+                <?php } ?>
+            <?php } ?>
+            <span id="image_validation"></span>
+            <div class="user-info">
+                <h1>Welcome<div class="user-name"><?php echo $_SESSION['username'] ?></div></h1>
+            </div>
+        </section>
+
         <div class="cards-container">
             <?php if(mysqli_num_rows($postsResult) > 0) {?>
                 <?php while($row = mysqli_fetch_assoc($postsResult)) {?>
@@ -70,5 +97,7 @@
             <?php } ?>
         </div>
     </main>
+
+    <script src="./scripts/welcome.js"></script>
 </body>
 </html>
