@@ -14,6 +14,7 @@
     } else {
         header('location: welcome.php');
     }
+    mysqli_close($link);
 ?>
 
 <!DOCTYPE html>

@@ -5,9 +5,6 @@ const form = document.querySelector('form#form-upload');
 const fileInput = document.querySelector('input#fileToUpload');
 const image_err = document.querySelector('span#image_validation');
 
-const delete_button = document.querySelector('button#delete');
-const delete_confirm = document.querySelector('div#delete-confirm');
-const cancel = document.querySelector('button#cancel');
 
 
 avatar.addEventListener('click', (event) => {
@@ -29,9 +26,3 @@ upload.addEventListener('click', (event) => {
     }
 });
 
-delete_button.addEventListener('click', (event) => {
-    delete_confirm.classList.toggle('hidden');
-})
-cancel.addEventListener('click', (event) => {
-    delete_confirm.classList.toggle('hidden');
-})

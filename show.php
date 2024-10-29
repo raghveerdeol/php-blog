@@ -1,17 +1,20 @@
 <?php 
-session_start();
-require_once "./config.php";
+    session_start();
+    require_once "./config.php";
 
-$postTitle = '';
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    $postTitle = $_POST['postTitle'];
+    $postTitle = '';
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        $postTitle = $_POST['postTitle'];
 
-    $stmt = $link->prepare("SELECT posts.id, posts.image, posts.user_id, posts.content, posts.title, categories.* FROM`posts` JOIN `categories` ON posts.category_id = categories.id WHERE posts.title = ?");
-    $stmt->bind_param("s", $postTitle);
-    $stmt->execute();
-    $postResult = $stmt->get_result();
+        $stmt = $link->prepare("SELECT posts.id, posts.image, posts.user_id, posts.content, posts.title, categories.* FROM`posts` JOIN `categories` ON posts.category_id = categories.id WHERE posts.title = ?");
+        $stmt->bind_param("s", $postTitle);
+        $stmt->execute();
+        $postResult = $stmt->get_result();
+    }
+
     mysqli_close($link);
-}
+
+
 ?>
 
 <!DOCTYPE html>

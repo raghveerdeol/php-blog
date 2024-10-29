@@ -73,6 +73,8 @@
             }
         }
     }
+
+    mysqli_close($link);
 ?>
 
 <!DOCTYPE html>

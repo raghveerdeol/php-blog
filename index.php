@@ -13,7 +13,6 @@
 
     $postsResult = $link->query($postsQuery);
     mysqli_close($link);
-
     ?>
 
     <!DOCTYPE html>

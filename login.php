@@ -76,8 +76,8 @@
                 mysqli_stmt_close($stmt);
             }
         }
-        mysqli_close($link);
     }
+    mysqli_close($link);
 ?>
 
 <!DOCTYPE html>

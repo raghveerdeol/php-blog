@@ -70,7 +70,6 @@
             header('location: welcome.php');
         }
     }
-
-    $link->close();
+    mysqli_close($link);
 
 ?>
