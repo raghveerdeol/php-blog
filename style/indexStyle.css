@@ -76,6 +76,7 @@ main{
     align-items: center;
     overflow: scroll;
     height: 88vh;
+    scrollbar-width: none;
 }
 .welcome{
     width: 20vw;

@@ -7,7 +7,7 @@
 
     $search = $_POST['search'];
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty(trim($search))) {
-        $searchSql = "SELECT posts.id, posts.image, posts.title, categories.* FROM`posts`
+        $searchSql = "SELECT posts.id, posts.image, posts.title, user_id, categories.* FROM`posts`
     JOIN `categories` ON posts.category_id = categories.id WHERE title LIKE '%$search%'";
 
         $result = $link->query($searchSql);
@@ -57,16 +57,18 @@
                                     <input type="text" value="<?php echo $row["title"]?>" name="postTitle" hidden>
                                     <button type="submit" class="show-button">Show</button>
                                 </form>
-                                <!-- edit button  -->
-                                <form action="./edit.php" method="GET">
-                                    <input type="text" value="<?php echo $row["title"]?>" name="postTitle" hidden>
-                                    <button type="submit" class="update-button">Edit</button>
-                                </form>
-                                <!-- delete button  -->
-                                <form action="./delete.php" method="POST">
-                                    <input type="text" value="<?php echo $row["title"]?>" name="postTitle" hidden>
-                                    <button type="submit" class="delete-button">Delete</button>
-                                </form>
+                                <?php if ($_SESSION['id'] == $row['user_id']) {?>
+                                    <!-- edit button  -->
+                                    <form action="./edit.php" method="GET">
+                                        <input type="text" value="<?php echo $row["title"]?>" name="postTitle" hidden>
+                                        <button type="submit" class="update-button">Edit</button>
+                                    </form>
+                                    <!-- delete button  -->
+                                    <form action="./delete.php" method="POST">
+                                        <input type="text" value="<?php echo $row["title"]?>" name="postTitle" hidden>
+                                        <button type="submit" class="delete-button">Delete</button>
+                                    </form>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
